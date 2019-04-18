@@ -13,7 +13,7 @@ public class TestIf {
     public static void main(String[] args) {
         SqlSession sqlSessionA = MybatisUtils.getSqlSession(false);
         int pageNum=1;
-        int pageSize=10;
+        int pageSize=3;
         int start=(pageNum-1)*pageSize;
         String colName="spilinfoname";
         String keyword="技术";

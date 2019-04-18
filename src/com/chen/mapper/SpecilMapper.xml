@@ -19,6 +19,9 @@
           ORDER BY ${coloder} DESC
           limit #{start},#{pageSize}
     </select>
+    <select id="findAllSplit4" resultMap="myResulMap">
+
+    </select>
 
 
 </mapper>
