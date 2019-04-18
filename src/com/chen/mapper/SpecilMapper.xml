@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chen.mapper.SpecilMapper">
+    <cache/>
+    <resultMap id="myResulMap" type="specil">
+
+        <id property="sid" column="spilinfoid"/>
+        <result property="did" column="depinfoid"/>
+        <result property="scode" column="spilinfocode"/>
+        <result property="sname" column="spilinfoname"/>
+        <result property="saim" column="spilinfoaim"/>
+        <result property="sprodire" column="spilinfoprodire"/>
+    </resultMap>
+
+    <select id="findAllSplit3" parameterType="java.util.Map" resultMap="myResulMap">
+          SELECT * FROM   specilinfo WHERE ${colName} LIKE concat('%',#{keyword},'%')
+          ORDER BY ${coloder} DESC
+          limit #{start},#{pageSize}
+    </select>
+
+
+</mapper>
